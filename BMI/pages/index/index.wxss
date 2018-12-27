@@ -1,4 +1,5 @@
 /**index.wxss**/
+
 .userinfo {
   display: flex;
   flex-direction: column;
@@ -18,4 +19,17 @@
 
 .usermotto {
   margin-top: 200px;
+}
+
+.flex-wrap {
+  flex-direction: row;
+  display: flex;
+}
+
+.section_title {
+   margin-left: 50px;
+}
+
+.btn-area {
+  margin-top: 50px;
 }

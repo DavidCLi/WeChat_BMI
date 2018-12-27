@@ -1,13 +1,22 @@
 <!--index.wxml-->
 <view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
+  <view class="title">
+    <text class="index-title">BMI</text>
   </view>
-  <view class="usermotto">
-    <text class="user-motto">BMI</text>
-  </view>
+  <form bindsubmit="formSubmit">
+    <view class="section">
+      <view class="flex-wrap">
+        <text class="section_title">身高(公分):\r\t\r\t</text>
+        <input type="digit" name="heigh" placeholder="please input here" />
+      </view>    
+      <view class="flex-wrap">
+        <text class="section_title">体重(公斤):\r\t\r\t</text>
+        <input type="digit" name="weight" placeholder="please input here" />
+      </view>    
+    </view>
+    <view class="btn-area flex-wrap">
+      <button formType="submit">Submit</button>
+    </view>
+  </form>
+  <text class="bmi">BMI:\r\t\r\t{{bmi}}</text>
 </view>
